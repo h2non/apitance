@@ -1,5 +1,7 @@
 
-# apitance [![Build Status](https://api.travis-ci.org/h2non/nar.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/nar.svg)][gemnasium] [![NPM version](https://badge.fury.io/js/nar.svg)][npm] [![Stories in Ready](https://badge.waffle.io/h2non/nar.png?label=ready&title=Ready)](https://waffle.io/h2non/nar)
+# apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![NPM version](https://badge.fury.io/js/apitance.svg)][npm] [![Stories in Ready](https://badge.waffle.io/h2non/apitance.png?label=ready&title=Ready)](https://waffle.io/h2non/apitance)
+
+Elegant acceptance API test runner built-on-top of Cucumber
 
 > **Work in progress**
 
@@ -15,11 +17,13 @@ If you need to use the API, you should install it as package dependency
 $ npm install apitance --save
 ```
 
+## API
+
 ## Contributing
 
 Wanna help? Cool! It will be really apreciated :)
 
-`nar` is completely written in LiveScript language.
+`apitance` is completely written in LiveScript/Wisp language.
 Take a look to the language [documentation][livescript] if you are new with it.
 and follow the LiveScript language conventions defined in the [coding style guide][coding-style]
 
@@ -50,22 +54,13 @@ Run tests
 $ make test
 ```
 
-Publish a new version
-```
-$ make publish
-```
-
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © Tomas Aparicio
 
 [livescript]: http://livescript.net
 [coding-style]: https://github.com/gkz/LiveScript-style-guide
-[travis]: http://travis-ci.org/h2non/nar
-[gemnasium]: https://gemnasium.com/h2non/nar
-[npm]: http://npmjs.org/package/nar
-[npm-scripts]: https://www.npmjs.org/doc/misc/npm-scripts.html
+[travis]: http://travis-ci.org/h2non/apitance
+[gemnasium]: https://gemnasium.com/h2non/apitance
+[npm]: http://npmjs.org/package/apitance
 [glob]: https://github.com/isaacs/node-glob
-[requireg]: https://github.com/h2non/requireg
-[grunt-plugin]: https://github.com/h2non/grunt-nar
-[gulp-plugin]: https://github.com/h2non/gulp-nar
