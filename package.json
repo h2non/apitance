@@ -1,7 +1,7 @@
 {
   "name": "apitance",
   "version": "0.1.0",
-  "description": "Elegant acceptance API test runner built-on-top of Cucumber",
+  "description": "Elegant acceptance API tests built-on-top of Cucumber",
   "preferGlobal": true,
   "engineStrict": true,
   "repository": "h2non/apitance",
@@ -29,6 +29,7 @@
     "cucumber": "^0.4.4",
     "findup-sync": "^0.1.3",
     "fw": "^0.1.0",
+    "lodash": "^2.4.1",
     "request": "^2.45.0",
     "yargs": "^1.3.2"
   },
