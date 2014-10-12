@@ -1,3 +1,11 @@
+
+Given(/^a template called "(.*)" with data:$/, function (name, data, done) {
+  this.createTemplate(name, data, this.query, function (err, res) {
+    expect(res.statusCode).to.be.equal(201)
+    done()
+  })
+})
+
 require! {
   path
   colors

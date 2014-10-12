@@ -1,6 +1,7 @@
 LS = ./node_modules/.bin/lsc
 LS_MODULE = ./node_modules/LiveScript/
 MOCHA = ./node_modules/.bin/mocha
+WISP = ./node_modules/.bin/wisp
 
 define release
 	VERSION=`node -pe "require('./package.json').version"` && \
@@ -22,13 +23,14 @@ mkdir:
 	mkdir -p lib/commands
 
 clean:
-	rm -rf lib
+	#	rm -rf lib
 
 compile: clean mkdir
-	cat src/commands/common.ls | $(LS) -c -s -b > ./lib/commands/common.js
+	cat src/cli.wisp | $(WISP) -c --no-map > ./lib/cli.js
+	#cat src/commands/common.ls | $(LS) -c -s -b > ./lib/commands/common.js
 
 mocha:
-	cat test/lib/helper.ls | $(LS) -c -s -b > ./test/lib/helper.js
+	cat test/lib/helper.ls | $(LS) -c > ./test/lib/helper.js
 	$(MOCHA) --timeout 25000 --reporter spec --ui tdd --compilers ls:$(LS_MODULE)
 
 release:

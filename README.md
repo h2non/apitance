@@ -1,7 +1,7 @@
 
 # apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![NPM version](https://badge.fury.io/js/apitance.svg)][npm] [![Stories in Ready](https://badge.waffle.io/h2non/apitance.png?label=ready&title=Ready)](https://waffle.io/h2non/apitance)
 
-Elegant acceptance API test runner built-on-top of Cucumber
+Elegant acceptance API tests built-on-top of Cucumber
 
 > **Work in progress**
 
@@ -15,6 +15,61 @@ $ npm install -g apitance
 If you need to use the API, you should install it as package dependency
 ```bash
 $ npm install apitance --save
+```
+
+## Pre-defined steps
+
+#### Request contract
+
+Verb definition
+```gherkin
+Given a request with method ([a-z]{3,7})
+```
+
+Request headers
+```gherkin
+And the request header "(.*)" with value "(.*)"
+```
+```gherkin
+And the context type is "(.*)"
+```
+```gherkin
+And the accept MIME type is "(.*)"
+```
+
+Request path
+```gherkin
+And the request path is (/path/test)
+```
+
+Request query params
+```gherkin
+And define a query string key (search) with value "Chuck Norris"
+```
+```gherkin
+And it have the query string "(.*)"
+```
+
+##### Flow control
+
+Wait/defer
+```gherkin
+And I wait 10 seconds
+```
+
+##### Requests pool
+
+```gherkin
+And create a pool of 100 clients using a stack of 20 concurrent
+```
+```gherkin
+And wait 100 miliseconds on each pool
+```
+
+#### Response expectation
+
+```
+Testing
 ```
 
 ## API
