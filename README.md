@@ -1,7 +1,6 @@
-
 # apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![NPM version](https://badge.fury.io/js/apitance.svg)][npm] [![Stories in Ready](https://badge.waffle.io/h2non/apitance.png?label=ready&title=Ready)](https://waffle.io/h2non/apitance)
 
-Elegant acceptance API tests built-on-top of Cucumber
+Elegant acceptance test for your HTTP API built-on-top of Cucumber
 
 > **Work in progress**
 

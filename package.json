@@ -21,25 +21,26 @@
     "test": "make test"
   },
   "keywords": [
-    "node",
-    "archive",
-    "archiver"
+    "api",
+    "acceptance",
+    "http",
+    "rest",
+    "restful",
+    "bdd",
+    "cucumber",
+    "gherking"
   ],
   "dependencies": {
     "cucumber": "^0.4.4",
-    "findup-sync": "^0.1.3",
     "fw": "^0.1.0",
     "lodash": "^2.4.1",
-    "request": "^2.45.0",
+    "request": "^2.46.0",
     "yargs": "^1.3.2"
   },
   "devDependencies": {
-    "LiveScript": "~1.2.0",
+    "LiveScript": "~1.3.0",
     "chai": "~1.9.1",
     "mocha": "~1.21.1",
-    "node-static": "~0.7.3",
-    "semver": "~2.3.1",
-    "stubby": "~0.2.3",
-    "wisp": "^0.10.0"
+    "stubby": "~0.2.3"
   }
 }

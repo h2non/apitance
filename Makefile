@@ -1,7 +1,6 @@
 LS = ./node_modules/.bin/lsc
 LS_MODULE = ./node_modules/LiveScript/
 MOCHA = ./node_modules/.bin/mocha
-WISP = ./node_modules/.bin/wisp
 
 define release
 	VERSION=`node -pe "require('./package.json').version"` && \
@@ -26,7 +25,6 @@ clean:
 	#	rm -rf lib
 
 compile: clean mkdir
-	cat src/cli.wisp | $(WISP) -c --no-map > ./lib/cli.js
 	#cat src/commands/common.ls | $(LS) -c -s -b > ./lib/commands/common.js
 
 mocha:
