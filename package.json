@@ -1,7 +1,7 @@
 {
   "name": "apitance",
-  "version": "0.1.0",
-  "description": "Elegant acceptance API tests built-on-top of Cucumber",
+  "version": "0.1.0-beta.0",
+  "description": "Elegant acceptance HTTP API steps",
   "preferGlobal": true,
   "engineStrict": true,
   "repository": "h2non/apitance",
@@ -18,6 +18,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
+    "start": "node --harmony bin/apitance",
     "test": "make test"
   },
   "keywords": [
@@ -28,19 +29,17 @@
     "restful",
     "bdd",
     "cucumber",
-    "gherking"
+    "gherking",
+    "http-api",
+    "raml",
+    "api-spec"
   ],
   "dependencies": {
     "cucumber": "^0.4.4",
     "fw": "^0.1.0",
     "lodash": "^2.4.1",
-    "request": "^2.46.0",
+    "request": "^2.49.0",
     "yargs": "^1.3.2"
   },
-  "devDependencies": {
-    "LiveScript": "~1.3.0",
-    "chai": "~1.9.1",
-    "mocha": "~1.21.1",
-    "stubby": "~0.2.3"
-  }
+  "devDependencies": {}
 }

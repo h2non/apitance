@@ -1,22 +1,22 @@
 # apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![NPM version](https://badge.fury.io/js/apitance.svg)][npm] [![Stories in Ready](https://badge.waffle.io/h2non/apitance.png?label=ready&title=Ready)](https://waffle.io/h2non/apitance)
 
-Elegant acceptance test for your HTTP API built-on-top of Cucumber
+Elegant acceptance tests for your HTTP API built-on-top of Cucumber.
+
+Just write what you want and what you expect based on Gherkin simple syntax
 
 > **Work in progress**
 
-## Installation
+## Usage
 
-It's recommended you install apitance as global package
 ```bash
 $ npm install -g apitance
 ```
 
-If you need to use the API, you should install it as package dependency
 ```bash
-$ npm install apitance --save
+$ apitance -r features/user.feature
 ```
 
-## Pre-defined steps
+## Steps
 
 #### Request contract
 

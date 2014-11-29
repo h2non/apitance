@@ -1,5 +1,4 @@
-LS = ./node_modules/.bin/lsc
-LS_MODULE = ./node_modules/LiveScript/
+CUCUMBER = ./node_modules/.bin/cucumber
 MOCHA = ./node_modules/.bin/mocha
 
 define release
@@ -16,20 +15,10 @@ endef
 
 default: all
 all: test
-test: compile mocha
-
-mkdir:
-	mkdir -p lib/commands
-
-clean:
-	#	rm -rf lib
-
-compile: clean mkdir
-	#cat src/commands/common.ls | $(LS) -c -s -b > ./lib/commands/common.js
+test: mocha
 
 mocha:
-	cat test/lib/helper.ls | $(LS) -c > ./test/lib/helper.js
-	$(MOCHA) --timeout 25000 --reporter spec --ui tdd --compilers ls:$(LS_MODULE)
+	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers 
 
 release:
 	@$(call release,patch)
@@ -42,4 +31,4 @@ publish: test release
 	npm publish
 
 loc:
-	wc -l src/*
+	wc -l lib/*
