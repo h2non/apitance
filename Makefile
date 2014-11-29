@@ -1,5 +1,6 @@
 CUCUMBER = ./node_modules/.bin/cucumber
 MOCHA = ./node_modules/.bin/mocha
+TRACEUR = ./node_modules/.bin/traceur
 
 define release
 	VERSION=`node -pe "require('./package.json').version"` && \
@@ -15,10 +16,22 @@ endef
 
 default: all
 all: test
-test: mocha
+test: compile mocha
+
+mkdir:
+	mkdir lib
+
+clean:
+	rm -rf lib
+
+copy:
+	cp ./node_modules/traceur/bin/traceur-runtime.js lib/traceur-runtime.js
 
 mocha:
-	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers 
+	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers js:mocha-traceur
+
+compile: clean mkdir copy
+	$(TRACEUR) --modules=commonjs --require=true --module=src/index.js --out lib/index.js
 
 release:
 	@$(call release,patch)

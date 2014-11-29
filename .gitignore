@@ -4,3 +4,4 @@ npm-debug.log
 test/fixtures/.tmp
 test/lib/*.js
 *.nar
+lib
