@@ -19,19 +19,19 @@ all: test
 test: compile mocha
 
 mkdir:
-	mkdir lib
+	mkdir src
 
 clean:
-	rm -rf lib
+	rm -rf src
 
 copy:
-	cp ./node_modules/traceur/bin/traceur-runtime.js lib/traceur-runtime.js
+	cp ./node_modules/traceur/bin/traceur-runtime.js src/traceur-runtime.js
 
 mocha:
 	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers js:mocha-traceur
 
 compile: clean mkdir copy
-	$(TRACEUR) --modules=commonjs --require=true --module=src/index.js --out lib/index.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/index.js --out src/index.js
 
 release:
 	@$(call release,patch)
@@ -44,4 +44,4 @@ publish: test release
 	npm publish
 
 loc:
-	wc -l lib/*
+	wc -l src/*

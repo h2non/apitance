@@ -7,9 +7,9 @@
   "repository": "h2non/apitance",
   "author": "Tomas Aparicio",
   "licenses": "MIT",
-  "main": "lib/index",
+  "main": "src/index",
   "directories": {
-    "lib": "./lib"
+    "lib": "./src"
   },
   "bin": {
     "apitance": "./bin/apitance"
