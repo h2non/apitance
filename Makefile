@@ -20,6 +20,8 @@ test: compile mocha
 
 mkdir:
 	mkdir src
+	mkdir src/support
+	mkdir src/steps
 
 clean:
 	rm -rf src
@@ -32,6 +34,10 @@ mocha:
 
 compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/index.js --out src/index.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/client.js --out src/client.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/cli.js --out src/cli.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/apitance.js --out src/apitance.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/world.js --out src/support/world.js
 
 release:
 	@$(call release,patch)
