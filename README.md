@@ -1,4 +1,5 @@
-# apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![NPM](https://img.shields.io/npm/v/resilient.svg)][npm]
+# apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/apitance/badges/gpa.svg)](https://codeclimate.com/github/h2non/apitance)  [![NPM](https://img.shields.io/npm/v/resilient.svg)][npm]
+
 <!--
 ![Downloads](https://img.shields.io/npm/dm/apitance.svg)
 -->
