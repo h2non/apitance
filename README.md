@@ -1,10 +1,10 @@
-# apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/apitance/badges/gpa.svg)](https://codeclimate.com/github/h2non/apitance)  [![NPM](https://img.shields.io/npm/v/resilient.svg)][npm]
+# apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/apitance/badges/gpa.svg)](https://codeclimate.com/github/h2non/apitance)  [![NPM](https://img.shields.io/npm/v/apitance.svg)][npm]
 
 <!--
 ![Downloads](https://img.shields.io/npm/dm/apitance.svg)
 -->
 
-Elegant acceptance tests for your HTTP API built-on-top of Cucumber.
+Elegant and expressive acceptance tests for your HTTP API built-on-top of Cucumber
 
 Just write what you want and what you expect based on Gherkin simple syntax
 
