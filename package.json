@@ -1,7 +1,7 @@
 {
   "name": "apitance",
   "version": "0.1.0-beta.0",
-  "description": "Elegant acceptance HTTP API",
+  "description": "Elegant, expressive and versatile acceptance HTTP API tests",
   "preferGlobal": true,
   "engineStrict": true,
   "repository": "h2non/apitance",
