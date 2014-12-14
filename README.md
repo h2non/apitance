@@ -4,9 +4,9 @@
 ![Downloads](https://img.shields.io/npm/dm/apitance.svg)
 -->
 
-Elegant and expressive acceptance tests for your HTTP API built-on-top of Cucumber
+Elegant, versatile and expressive BBD-style acceptance tests for your HTTP API using Cucumber
 
-Just write what you want and what you expect based on Gherkin simple syntax
+Just write what you want and what you expect using Gherkin syntax
 
 > **Work in progress**
 

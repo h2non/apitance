@@ -1,6 +1,7 @@
 CUCUMBER = ./node_modules/.bin/cucumber
 MOCHA = ./node_modules/.bin/mocha
 TRACEUR = ./node_modules/.bin/traceur
+APITANCE = ./bin/apitance
 
 define release
 	VERSION=`node -pe "require('./package.json').version"` && \
@@ -16,7 +17,7 @@ endef
 
 default: all
 all: test
-test: compile mocha
+test: compile mocha apitance
 
 mkdir:
 	mkdir src
@@ -31,6 +32,9 @@ copy:
 
 mocha:
 	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers js:mocha-traceur
+
+apitance:
+	$(APITANCE)
 
 compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/index.js --out src/index.js
@@ -54,4 +58,4 @@ publish: test release
 	npm publish
 
 loc:
-	wc -l src/*
+	wc -l lib/*

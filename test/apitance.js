@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const { Apitance } = require('../')
+const Apitance = require('../')
 
 describe('Apitance', () => {
   it('should expose the API', () => {

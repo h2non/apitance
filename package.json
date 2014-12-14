@@ -1,6 +1,6 @@
 {
   "name": "apitance",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0",
   "description": "Elegant, expressive and versatile acceptance HTTP API tests",
   "preferGlobal": true,
   "engineStrict": true,
