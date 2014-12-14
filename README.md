@@ -4,11 +4,19 @@
 ![Downloads](https://img.shields.io/npm/dm/apitance.svg)
 -->
 
-Elegant, versatile and expressive BBD-style acceptance tests for your HTTP API using Cucumber
+**Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for your **HTTP API** using [Cucumber](http://cukes.info)
 
-Just write what you want and what you expect using Gherkin syntax
+Just write what you want and what you expect using Gherkin syntax.
+Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases
+that involves an HTTP API
 
 > **Work in progress**
+
+<!--
+## Rationale
+
+## Features
+-->
 
 ## Usage
 
