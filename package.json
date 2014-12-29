@@ -1,6 +1,6 @@
 {
   "name": "apitance",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "Elegant, expressive and versatile acceptance HTTP API tests",
   "preferGlobal": true,
   "engineStrict": true,
@@ -45,6 +45,7 @@
     "chai": "^1.10.0",
     "mocha": "^2.0.1",
     "mocha-traceur": "^2.0.0",
-    "traceur": "0.0.78"
+    "semver": "^4.2.0",
+    "traceur": "^0.0.78"
   }
 }

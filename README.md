@@ -7,8 +7,7 @@
 **Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for your **HTTP API** using [Cucumber](http://cukes.info)
 
 Just write what you want and what you expect using Gherkin syntax.
-Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases
-that involves an HTTP API
+Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API
 
 > **Work in progress**
 
@@ -30,42 +29,51 @@ $ apitance -r features/user.feature
 
 ## Steps
 
-#### Request contract
+#### Defining the request
 
-Verb definition
+##### Method definition
+
 ```gherkin
 Given a request with method ([a-z]{3,7})
 ```
 
-Request headers
+##### Headers
 ```gherkin
-And the request header "(.*)" with value "(.*)"
-```
-```gherkin
-And the context type is "(.*)"
-```
-```gherkin
-And the accept MIME type is "(.*)"
+the request header "(.*)" with value "(.*)"
 ```
 
-Request path
 ```gherkin
-And the request path is (/path/test)
+the context type is "(.*)"
 ```
 
-Request query params
 ```gherkin
-And define a query string key (search) with value "Chuck Norris"
-```
-```gherkin
-And it have the query string "(.*)"
+the accept MIME type is "(.*)"
 ```
 
-##### Flow control
-
-Wait/defer
+##### Path
 ```gherkin
-And I wait 10 seconds
+the request path is (/path/test)
+```
+
+##### Query params
+```gherkin
+define a query string key (search) with value "Chuck Norris"
+```
+
+```gherkin
+it have the query string "(.*)"
+```
+
+##### Timers control
+
+Maximum timeout
+```gherkin
+request timeout is (\d+) seconds
+```
+
+Wait before send the request
+```gherkin
+And I wait (\d+) seconds
 ```
 
 ##### Requests pool
@@ -77,21 +85,31 @@ And create a pool of 100 clients using a stack of 20 concurrent
 And wait 100 miliseconds on each pool
 ```
 
-#### Response expectation
+#### Response verification
 
 ```
-Testing
+Then status code should be (\d+)
 ```
 
-## API
+```
+Then status code is (\d+)
+```
+
+## Command-line interface
+
+Getting help
+```bash
+$ apitance --help
+```
+
+
+```bash
 
 ## Contributing
 
-Wanna help? Cool! It will be really apreciated :)
+Wanna help? Cool!
 
-`apitance` is completely written in LiveScript/Wisp language.
-Take a look to the language [documentation][livescript] if you are new with it.
-and follow the LiveScript language conventions defined in the [coding style guide][coding-style]
+`apitance` is written in JavaScript-next (ECMAScript 6)
 
 You must add new test cases for any new feature or refactor you do,
 always following the same design/code patterns that already exist

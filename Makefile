@@ -42,10 +42,11 @@ compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/cli.js --out src/cli.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/apitance.js --out src/apitance.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/request.js --out src/steps/request.js
-	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/expect.js --out src/steps/expect.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/expectations.js --out src/steps/expectations.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/helpers.js --out src/steps/helpers.js
+	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/steps.js --out src/steps/steps.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/world.js --out src/support/world.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/hooks.js --out src/support/hooks.js
-	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/steps.js --out src/steps/steps.js
 
 release:
 	@$(call release,patch)
