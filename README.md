@@ -4,7 +4,7 @@
 ![Downloads](https://img.shields.io/npm/dm/apitance.svg)
 -->
 
-<img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="120" align="right" />
+<img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right" />
 
 **Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for your **HTTP API** using [Cucumber](http://cukes.info)
 
