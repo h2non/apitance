@@ -26,3 +26,21 @@ Feature: Basic client
     And request timeout is 1 second
     When perform the request
     Then should fail due to timeout error
+
+  Scenario: body payload
+    Given a server url http://httpbin.org/post
+    And the following body data:
+      """
+      {"hello":"world"}
+      """
+    When perform the request
+    Then status code should be 200
+
+  Scenario: body payload file path
+    Given a server url http://httpbin.org/post
+    And the following body data from file:
+      """
+      test/fixtures/sample.json
+      """
+    When perform the request
+    Then status code should be 200
