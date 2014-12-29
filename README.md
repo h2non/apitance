@@ -102,8 +102,9 @@ Getting help
 $ apitance --help
 ```
 
-
 ```bash
+$ apitance -r path/to/features -r path/to/steps
+```
 
 ## Contributing
 
@@ -142,8 +143,6 @@ $ make test
 
 [MIT](http://opensource.org/licenses/MIT) © Tomas Aparicio
 
-[livescript]: http://livescript.net
-[coding-style]: https://github.com/gkz/LiveScript-style-guide
 [travis]: http://travis-ci.org/h2non/apitance
 [gemnasium]: https://gemnasium.com/h2non/apitance
 [npm]: http://npmjs.org/package/apitance
