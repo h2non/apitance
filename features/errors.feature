@@ -1,4 +1,4 @@
-Feature: Basic client
+Feature: Errors
   As a tester
   I want to verify different testing errors behaviors
 
