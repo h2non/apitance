@@ -21,6 +21,16 @@ Feature: Basic client
     When perform the request
     Then status code should be 200
 
+  Scenario: authentication credentials
+    Given the username "chuck" and password "n0rr1s"
+    When perform the request
+    Then status code should be 200
+
+  Scenario: authorization
+    Given the authorization value "chuck"
+    When perform the request
+    Then status code should be 200
+
   Scenario: custom timeout
     Given a server url http://httpbin.org/delay/3
     And request timeout is 1 second
