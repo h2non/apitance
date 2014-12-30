@@ -37,6 +37,13 @@ Feature: Basic client
     When perform the request
     Then should fail due to timeout error
 
+  Scenario: wait timeout
+    Given a server url http://httpbin.org/delay/3
+    And request timeout is 1 second
+    And should wait 1 second before send the request
+    When perform the request
+    Then should fail due to timeout error
+
   Scenario: body payload
     Given a server url http://httpbin.org/post
     And the following body data:
