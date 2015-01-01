@@ -1,3 +1,4 @@
+STUBBY = ./node_modules/.bin/stubby
 CUCUMBER = ./node_modules/.bin/cucumber
 MOCHA = ./node_modules/.bin/mocha
 TRACEUR = ./node_modules/.bin/traceur
@@ -17,7 +18,8 @@ endef
 
 default: all
 all: test
-test: compile mocha apitance
+test: compile mocha test-acceptance
+test-acceptance: mock-server-stop mock-server apitance mock-server-stop
 
 mkdir:
 	mkdir src
@@ -47,6 +49,12 @@ compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/steps/steps.js --out src/steps/steps.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/world.js --out src/support/world.js
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/hooks.js --out src/support/hooks.js
+
+mock-server:
+	$(STUBBY) -d ./test/mocks/*.yaml > /dev/null & echo $$! > .server.pid
+
+mock-server-stop:
+	[ -f .server.pid ] && kill -9 `cat .server.pid | head -n 1` && rm -f .server.pid || exit 0
 
 release:
 	@$(call release,patch)

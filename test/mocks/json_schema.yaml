@@ -1,0 +1,26 @@
+- request:
+    url: ^/json-schema/simple
+    method: GET
+  response:
+    - status: 200
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "address":{
+            "streetAddress": "21 2nd Street",
+            "city":"New York"
+          }
+        }
+
+- request:
+    url: ^/json-schema/invalid
+    method: GET
+  response:
+    - status: 200
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "address": null
+        }

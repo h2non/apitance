@@ -5,3 +5,4 @@ test/fixtures/.tmp
 test/lib/*.js
 *.nar
 src
+.server.pid
