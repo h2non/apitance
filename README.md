@@ -19,11 +19,15 @@ Apitance provides a built-in reusable Cucumber descriptive steps which aims to c
 ## Features
 -->
 
-## Usage
+## Installation
+
+Apitance requires you have installed [node.js](http://nodejs.org)
 
 ```bash
-$ npm install -g apitance
+$ [sudo] npm install -g apitance
 ```
+
+## Usage
 
 ```bash
 $ apitance -r features/user.feature
