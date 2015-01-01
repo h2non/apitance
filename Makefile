@@ -16,10 +16,23 @@ define release
 	git tag "$$NEXT_VERSION" -m "Version $$NEXT_VERSION"
 endef
 
+define concat-mocks
+	node -e "\
+	var concat = require('concat-files'); \
+  concat([ \
+    'test/mocks/json_schema.yaml', \
+    'test/mocks/misc.yaml', \
+  ], 'test/mocks/all.yaml') \
+	"
+endef
+
 default: all
 all: test
 test: compile mocha test-acceptance
-test-acceptance: mock-server-stop mock-server apitance mock-server-stop
+test-acceptance: mock-server-stop concat mock-server apitance mock-server-stop
+
+concat:
+	@$(call concat-mocks)
 
 mkdir:
 	mkdir src
@@ -51,7 +64,7 @@ compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/support/hooks.js --out src/support/hooks.js
 
 mock-server:
-	$(STUBBY) -d ./test/mocks/*.yaml > /dev/null & echo $$! > .server.pid
+	$(STUBBY) -d ./test/mocks/all.yaml > /dev/null & echo $$! > .server.pid
 
 mock-server-stop:
 	[ -f .server.pid ] && kill -9 `cat .server.pid | head -n 1` && rm -f .server.pid || exit 0

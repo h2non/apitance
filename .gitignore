@@ -6,3 +6,4 @@ test/lib/*.js
 *.nar
 src
 .server.pid
+test/mocks/all.yaml
