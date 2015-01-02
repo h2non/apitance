@@ -6,7 +6,7 @@
 
 <img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right" />
 
-**Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for your **HTTP API** using [Cucumber](http://cukes.info)
+**Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for **HTTP APIs** based on Gherkin language and built-on-top of [Cucumber](http://cukes.info)
 
 Just write what you want and what you expect using Gherkin syntax.
 Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API
@@ -15,15 +15,26 @@ Apitance provides a built-in reusable Cucumber descriptive steps which aims to c
 
 <!--
 ## Rationale
-
-## Features
 -->
 
-## Usage
+## Features
+
+- Generic and reusable steps with expressiveness and alias
+- Full HTTP protocol features support, including authentication, headers, cookies
+- High number of assert/expectation expressions for responses validation
+- Full support for [JSON schema](http://json-schema.org/) body validation
+- Support all the Cucumber.js features, such as hooks, configuration, stages...
+- Extend support. You can create or overwrite custom steps
+
+## Installation
+
+Apitance requires you have installed [node.js](http://nodejs.org)
 
 ```bash
-$ npm install -g apitance
+$ [sudo] npm install -g apitance
 ```
+
+## Usage
 
 ```bash
 $ apitance -r features/user.feature
