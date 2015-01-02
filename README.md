@@ -105,14 +105,14 @@ $ apitance --help
 ```
 
 ```bash
-$ apitance -r path/to/features -r path/to/steps
+$ apitance -r path/to/steps path/to/feature
 ```
 
 ## Contributing
 
 Wanna help? Cool!
 
-`apitance` is written in JavaScript-next (ECMAScript 6)
+`apitance` is written in JavaScript Harmony (ECMAScript 6)
 
 You must add new test cases for any new feature or refactor you do,
 always following the same design/code patterns that already exist

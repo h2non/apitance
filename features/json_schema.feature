@@ -49,16 +49,16 @@ Feature: JSON Schema
     Given a server url http://localhost:8882/json-schema/invalid
     When perform the request
     Then status code should be 200
-    And body should implement the JSON schema file:
+    And body should not implement the JSON schema file:
       """
       features/fixtures/simple_schema.json
       """
 
   Scenario: invalid file file
-    Given a server url http://localhost:8882/ping
-    When perform the request
-    Then status code should be 200
-    And body should implement the JSON schema file:
-      """
-      features/fixtures/_invalid.json
-      """
+    #Given a server url http://localhost:8882/ping
+    #When perform the request
+    #Then status code should be 200
+    #And body should implement the JSON schema file:
+    #  """
+    #  features/fixtures/_invalid.json
+    #  """

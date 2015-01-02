@@ -46,7 +46,7 @@ Feature: Basic client
 
   Scenario: body payload
     Given a server url http://httpbin.org/post
-    And the following body data:
+    And the following request body data:
       """
       {"hello":"world"}
       """
@@ -55,7 +55,7 @@ Feature: Basic client
 
   Scenario: body payload file path
     Given a server url http://httpbin.org/post
-    And the following body data from file:
+    And the following request body data from file:
       """
       test/fixtures/sample.json
       """
