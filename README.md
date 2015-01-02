@@ -15,9 +15,16 @@ Apitance provides a built-in reusable Cucumber descriptive steps which aims to c
 
 <!--
 ## Rationale
+-->
 
 ## Features
--->
+
+- Generic and reusable steps with expressiveness and alias
+- Full HTTP protocol features support, including authentication, headers, cookies
+- High number of assert/expectation expressions for responses validation
+- Full support for [JSON schema](http://json-schema.org/) body validation
+- Support all the Cucumber.js features, such as hooks, configuration, stages...
+- Extend support. You can create or overwrite custom steps
 
 ## Installation
 
