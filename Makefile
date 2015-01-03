@@ -19,11 +19,10 @@ endef
 define concat-mocks
 	node -e "\
 	var concat = require('concat-files'); \
-  concat([ \
-    'test/mocks/json_schema.yaml', \
-    'test/mocks/misc.yaml', \
-  ], 'test/mocks/all.yaml') \
-	"
+ 	concat([ \
+		'test/mocks/json_schema.yaml', \
+		'test/mocks/misc.yaml', \
+	], 'test/mocks/all.yaml')"
 endef
 
 default: all
