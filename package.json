@@ -35,6 +35,7 @@
     "api-spec"
   ],
   "dependencies": {
+    "chai-http": "^1.0.0",
     "cucumber": "^0.4.4",
     "fw": "^0.1.0",
     "lodash": "^2.4.1",
