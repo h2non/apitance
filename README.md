@@ -24,7 +24,9 @@ Apitance provides a built-in reusable Cucumber descriptive steps which aims to c
 - High number of assert/expectation expressions for responses validation
 - Full support for [JSON schema](http://json-schema.org/) body validation
 - Support all the Cucumber.js features, such as hooks, configuration, stages...
-- Extend support. You can create or overwrite custom steps
+- Built-in support for templating and variables such as environment variables
+- Send body payload data from external files or remote servers
+- Extending support. You can create or overwrite custom steps
 
 ## Installation
 
