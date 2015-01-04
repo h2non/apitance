@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Apitance by h2non</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Apitance</h1>
+        <h2>Elegant, versatible and expressive BBD-style acceptance tests for HTTP APIs</h2>
+        <a href="https://github.com/h2non/apitance" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="apitance-----" class="anchor" href="#apitance-----" aria-hidden="true"><span class="octicon octicon-link"></span></a>apitance <a href="http://travis-ci.org/h2non/apitance"><img src="https://api.travis-ci.org/h2non/apitance.svg?branch=master" alt="Build Status"></a> <a href="https://gemnasium.com/h2non/apitance"><img src="https://gemnasium.com/h2non/apitance.svg" alt="Dependency Status"></a> <a href="https://codeclimate.com/github/h2non/apitance"><img src="https://codeclimate.com/github/h2non/apitance/badges/gpa.svg" alt="Code Climate"></a>  <a href="http://npmjs.org/package/apitance"><img src="https://img.shields.io/npm/v/apitance.svg" alt="NPM"></a>
+</h1>
+
+
+
+<p><img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right"></p>
+
+<p><strong>Elegant</strong>, <strong>versatile</strong> and <strong>expressive</strong> <strong>BBD</strong>-style <strong>acceptance tests</strong> for <strong>HTTP APIs</strong> based on Gherkin language and built-on-top of <a href="http://cukes.info">Cucumber</a></p>
+
+<p>Just write what you want and what you expect using Gherkin syntax.
+Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API</p>
+
+<blockquote>
+<p><strong>Work in progress</strong></p>
+</blockquote>
+
+
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Generic and reusable steps with expressiveness and multiple alias</li>
+<li>Full HTTP protocol features support, including authentication, headers, cookies</li>
+<li>High number of assert/expectation expressions for responses validation</li>
+<li>Request/responses caching, reuse and chaining</li>
+<li>Validate body responses against <a href="http://json-schema.org/">JSON schema</a>
+</li>
+<li>Support all the Cucumber.js features, such as hooks, configuration, stages...</li>
+<li>Built-in support for templating and variables such as environment variables</li>
+<li>Extended syntax with conditionals, control flow and more...</li>
+<li>Send body payload data from external files or remote servers</li>
+<li>Extending support. You can create or overwrite custom steps</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Apitance requires you have installed <a href="http://nodejs.org">node.js</a></p>
+
+<div class="highlight highlight-bash"><pre>$ [sudo] npm install -g apitance</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-bash"><pre>$ apitance -r features/user.feature</pre></div>
+
+<h2>
+<a id="steps" class="anchor" href="#steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps</h2>
+
+<h4>
+<a id="defining-the-request" class="anchor" href="#defining-the-request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining the request</h4>
+
+<h5>
+<a id="method-definition" class="anchor" href="#method-definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method definition</h5>
+
+<div class="highlight highlight-gherkin"><pre><span class="pl-k">Given </span>a request with method ([a-z]{3,7})</pre></div>
+
+<h5>
+<a id="headers" class="anchor" href="#headers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Headers</h5>
+
+<div class="highlight highlight-gherkin"><pre>the request header <span class="pl-s1">"(.*)"</span> with value <span class="pl-s1">"(.*)"</span></pre></div>
+
+<div class="highlight highlight-gherkin"><pre>the context type is <span class="pl-s1">"(.*)"</span></pre></div>
+
+<div class="highlight highlight-gherkin"><pre>the accept MIME type is <span class="pl-s1">"(.*)"</span></pre></div>
+
+<h5>
+<a id="path" class="anchor" href="#path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Path</h5>
+
+<div class="highlight highlight-gherkin"><pre>the request path is (/path/test)</pre></div>
+
+<h5>
+<a id="query-params" class="anchor" href="#query-params" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query params</h5>
+
+<div class="highlight highlight-gherkin"><pre>define a query string key (search) with value <span class="pl-s1">"Chuck Norris"</span></pre></div>
+
+<div class="highlight highlight-gherkin"><pre>it have the query string <span class="pl-s1">"(.*)"</span></pre></div>
+
+<h5>
+<a id="timers-control" class="anchor" href="#timers-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Timers control</h5>
+
+<p>Maximum timeout</p>
+
+<div class="highlight highlight-gherkin"><pre>request timeout is (\d+) seconds</pre></div>
+
+<p>Wait before send the request</p>
+
+<div class="highlight highlight-gherkin"><pre><span class="pl-k">And </span>I wait (\d+) seconds</pre></div>
+
+<h5>
+<a id="requests-pool" class="anchor" href="#requests-pool" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requests pool</h5>
+
+<div class="highlight highlight-gherkin"><pre><span class="pl-k">And </span>create a pool of 100 clients using a stack of 20 concurrent</pre></div>
+
+<div class="highlight highlight-gherkin"><pre><span class="pl-k">And </span>wait 100 miliseconds on each pool</pre></div>
+
+<h4>
+<a id="response-verification" class="anchor" href="#response-verification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Response verification</h4>
+
+<pre><code>Then status code should be (\d+)
+</code></pre>
+
+<pre><code>Then status code is (\d+)
+</code></pre>
+
+<h2>
+<a id="command-line-interface" class="anchor" href="#command-line-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command-line interface</h2>
+
+<p>Getting help</p>
+
+<div class="highlight highlight-bash"><pre>$ apitance --help</pre></div>
+
+<div class="highlight highlight-bash"><pre>$ apitance -r path/to/steps path/to/feature</pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Wanna help? Cool!</p>
+
+<p><code>apitance</code> is written in JavaScript Harmony (ECMAScript 6)</p>
+
+<p>You must add new test cases for any new feature or refactor you do,
+always following the same design/code patterns that already exist</p>
+
+<h3>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h3>
+
+<p>Only <a href="http://nodejs.org">node.js</a> is required for development</p>
+
+<p>Clone/fork this repository</p>
+
+<pre><code>$ git clone https://github.com/h2non/apitance.git &amp;&amp; cd apitance
+</code></pre>
+
+<p>Install dependencies</p>
+
+<pre><code>$ npm install
+</code></pre>
+
+<p>Compile code</p>
+
+<pre><code>$ make compile
+</code></pre>
+
+<p>Run tests</p>
+
+<pre><code>$ make test
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://opensource.org/licenses/MIT">MIT</a> © Tomas Aparicio</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/h2non/apitance/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/h2non/apitance/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/h2non/apitance"></a> is maintained by <a href="https://github.com/h2non">h2non</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
