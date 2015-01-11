@@ -28,6 +28,7 @@ endef
 default: all
 all: test
 test: compile mocha test-acceptance
+test-unit: compile mocha
 test-acceptance: mock-server-stop concat mock-server apitance mock-server-stop
 
 concat:
