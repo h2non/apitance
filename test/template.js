@@ -40,4 +40,13 @@ describe('Template', () => {
       expect(render({ a: 'hello ${world}' }, { world: 'chuck' })).to.be.deep.equal({ a: 'hello chuck' })
     })
   })
+
+  describe('invalid', () => {
+    it('should return the same value if invalid', () => {
+      expect(render(null)).to.be.equal(null)
+      expect(render({})).to.be.deep.equal({})
+      const fn = function () {}
+      expect(render(fn)).to.be.equal(fn)
+    })
+  })
 })
