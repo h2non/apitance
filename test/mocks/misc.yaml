@@ -11,3 +11,15 @@
         content-type: application/json
       body: >
         {"hello": "world"}
+
+- request:
+    url: ^/config
+    method: POST
+    body: >
+      {"hello": "world"}
+  response:
+    - status: 202
+      headers:
+        content-type: application/json
+      body: >
+        {"config": true}

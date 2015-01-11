@@ -1,5 +1,6 @@
 Feature: Templating
-  As a tester I want to use common
+  As a tester
+  I want to use common
   template features in steps definitions
 
   Scenario: environment variables

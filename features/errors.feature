@@ -11,3 +11,8 @@ Feature: Errors
     Given a server url http://localhost:8888
     When perform the request
     Then should fail due to "refuse" error
+
+  Scenario: request error
+    Given a server url http://localhost:8888
+    When perform the request
+    Then should fail due to an error
