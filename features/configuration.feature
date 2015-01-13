@@ -10,14 +10,20 @@ Feature: Configuration
       | Method  | POST |
       | Path    | /config |
       | Body    | {"hello": "world"} |
-      | Authentication | Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== |
-      | Headers | {"Content-Type": "application/json"} |
+      | Authorization | Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== |
+      | Headers | {"Version": "0.1.0"} |
+      | Content-Type | application/json |
+      | Query | key=value&another=value |
 
   Scenario: simple configuration request
-    #When I send the request
-    #Then response status code should be 200
-    #And response header "Content-Type" should be equal "application/json"
-    #And response body should be equal:
-    #  """
-    #  {"config": true}
-    #  """
+    When I send the request
+    Then response status code should be 202
+    And response header "Content-Type" should be equal "application/json"
+    And response body should be equal:
+      """
+      {"config": true}
+      """
+    And flush global configuration
+
+
+

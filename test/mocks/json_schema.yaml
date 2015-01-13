@@ -1,6 +1,8 @@
 - request:
     url: ^/json-schema/simple
-    method: GET
+    method:
+      - GET
+      - POST
   response:
     - status: 200
       headers:
@@ -15,7 +17,9 @@
 
 - request:
     url: ^/json-schema/invalid
-    method: GET
+    method:
+      - GET
+      - POST
   response:
     - status: 200
       headers:
