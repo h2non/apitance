@@ -32,7 +32,9 @@
     "gherking",
     "http-api",
     "raml",
-    "api-spec"
+    "blueprint",
+    "spec",
+    "bdd"
   ],
   "dependencies": {
     "chai-http": "^1.0.0",
