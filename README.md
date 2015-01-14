@@ -8,10 +8,12 @@
 
 **Elegant**, **versatile** and **expressive** **BBD**-style **acceptance tests** for **HTTP APIs** based on Gherkin language and built-on-top of [Cucumber](http://cukes.info)
 
+<!--
 Just write what you want and what you expect using Gherkin syntax.
 Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API
+-->
 
-> **Work in progress**
+> **Still beta version**
 
 <!--
 ## Rationale
@@ -24,6 +26,7 @@ Apitance provides a built-in reusable Cucumber descriptive steps which aims to c
 - High number of assert/expectation expressions for responses validation
 - Request/responses caching, reuse and chaining
 - Validate body responses against [JSON schema](http://json-schema.org/)
+- API discovering based on RAML
 - Support all the Cucumber.js features, such as hooks, configuration, stages...
 - Built-in support for templating and variables such as environment variables
 - Extended syntax with conditionals, control flow and more...
