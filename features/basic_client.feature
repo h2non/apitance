@@ -48,10 +48,10 @@ Feature: Basic client
 
   Scenario: body payload
     Given a server url http://localhost:8882/post
-    And mock GET request to "/post"
+    And mock POST request to "/post"
     And mock should reply with status 200 and body:
       """
-      {"hello": "world"}
+      {"hello":"world"}
       """
     And the following request body data:
       """
