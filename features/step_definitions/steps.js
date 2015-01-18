@@ -20,6 +20,11 @@ module.exports = function () {
     done()
   })
 
+  Step(/mock should reply with status ([0-9]{3}) and body:/i, function (status, body, done) {
+    this._mock.reply(parseInt(status, 10), body)
+    done()
+  })
+
   Step(/^clean all mock$/, function (done) {
     nock.cleanAll()
     done()
