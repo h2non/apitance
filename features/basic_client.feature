@@ -4,7 +4,9 @@ Feature: Basic client
   using the built-in Apitance steps
 
   Background:
-    Given a server url http://httpbin.org/status/200
+    Given a server url http://localhost:8882/status/200
+    And mock GET request to "/status/200"
+    And mock should reply with status 200
 
   Scenario: basic request
     Given the request method is GET

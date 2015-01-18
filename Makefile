@@ -49,7 +49,7 @@ mocha:
 	$(MOCHA) --harmony --timeout 2000 --reporter spec --ui tdd --compilers js:mocha-traceur
 
 apitance:
-	$(APITANCE)
+	$(APITANCE) -r features/step_definitions
 
 compile: clean mkdir copy
 	$(TRACEUR) --modules=commonjs --require=true --module=lib/index.js --out src/index.js

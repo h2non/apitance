@@ -51,6 +51,7 @@
     "concat-files": "^0.1.0",
     "mocha": "^2.0.1",
     "mocha-traceur": "^2.0.0",
+    "nock": "^0.57.0",
     "semver": "^4.2.0",
     "stubby": "^0.2.10",
     "traceur": "^0.0.78"
