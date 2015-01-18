@@ -47,6 +47,7 @@ $ [sudo] npm install -g apitance
 $ apitance -r features/user.feature
 ```
 
+<!--
 ## Steps
 
 #### Defining the request
@@ -114,6 +115,7 @@ Then status code should be (\d+)
 ```
 Then status code is (\d+)
 ```
+-->
 
 ## Command-line interface
 
