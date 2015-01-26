@@ -2,6 +2,7 @@ Feature: Variables
   As a tester
   I want to define multiple variables from steps
 
+  @valid
   Scenario: constants
     Given set constant "chuck" with value "norris"
     And set constant "norris" to "chuck"

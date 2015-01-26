@@ -3,6 +3,7 @@ Feature: JSON Schema
   I want to assert multiple JSON responses validating
   it with a proper JSON Schema interface
 
+  @valid
   Scenario: validate JSON Schema from a file
     Given a server url http://localhost:8882/json-schema/simple
     When perform the request
@@ -12,6 +13,7 @@ Feature: JSON Schema
       features/fixtures/simple_schema.json
       """
 
+  @valid
   Scenario: validate JSON Schema in-line
     Given a server url http://localhost:8882/json-schema/simple
     When perform the request
@@ -45,6 +47,7 @@ Feature: JSON Schema
       }
       """
 
+  @valid
   Scenario: invalid JSON Schema
     Given a server url http://localhost:8882/json-schema/invalid
     When perform the request
@@ -54,11 +57,12 @@ Feature: JSON Schema
       features/fixtures/simple_schema.json
       """
 
+  @fail
   Scenario: invalid file file
-    #Given a server url http://localhost:8882/ping
-    #When perform the request
-    #Then status code should be 200
-    #And body should implement the JSON schema file:
-    #  """
-    #  features/fixtures/_invalid.json
-    #  """
+    Given a server url http://localhost:8882/ping
+    When perform the request
+    Then status code should be 200
+    And body should implement the JSON schema file:
+      """
+      features/fixtures/invalid.json
+      """

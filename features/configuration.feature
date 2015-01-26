@@ -15,6 +15,7 @@ Feature: Configuration
       | Content-Type | application/json |
       | Query | key=value&another=value |
 
+  @valid
   Scenario: simple configuration request
     When I send the request
     Then response status code should be 202
