@@ -13,7 +13,7 @@ Just write what you want and what you expect using Gherkin syntax.
 Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API
 -->
 
-> **Still beta version**
+> **Still work in progress**
 
 <!--
 ## Rationale
