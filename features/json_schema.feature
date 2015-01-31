@@ -3,9 +3,12 @@ Feature: JSON Schema
   I want to assert multiple JSON responses validating
   it with a proper JSON Schema interface
 
+  Background:
+    Given a server base url: http://localhost:8882
+
   @valid
   Scenario: validate JSON Schema from a file
-    Given a server url http://localhost:8882/json-schema/simple
+    Given a server url /json-schema/simple
     When perform the request
     Then status code should be 200
     And body should implement the JSON schema file:
@@ -15,7 +18,7 @@ Feature: JSON Schema
 
   @valid
   Scenario: validate JSON Schema in-line
-    Given a server url http://localhost:8882/json-schema/simple
+    Given a server url /json-schema/simple
     When perform the request
     Then status code should be 200
     And body should implement the JSON schema:
@@ -49,7 +52,17 @@ Feature: JSON Schema
 
   @valid
   Scenario: invalid JSON Schema
-    Given a server url http://localhost:8882/json-schema/invalid
+    Given a server url /json-schema/invalid
+    When perform the request
+    Then status code should be 200
+    And body should not implement the JSON schema file:
+      """
+      features/fixtures/simple_schema.json
+      """
+
+  @valid
+  Scenario: nested JSON validation
+    Given a server url /json-schema/invalid
     When perform the request
     Then status code should be 200
     And body should not implement the JSON schema file:
@@ -59,7 +72,7 @@ Feature: JSON Schema
 
   @fail
   Scenario: invalid file file
-    Given a server url http://localhost:8882/ping
+    Given a server url /ping
     When perform the request
     Then status code should be 200
     And body should implement the JSON schema file:
