@@ -1,23 +1,10 @@
 # apitance [![Build Status](https://api.travis-ci.org/h2non/apitance.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/apitance.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/apitance/badges/gpa.svg)](https://codeclimate.com/github/h2non/apitance)  [![NPM](https://img.shields.io/npm/v/apitance.svg)][npm]
 
-<!--
-![Downloads](https://img.shields.io/npm/dm/apitance.svg)
--->
-
 <img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right" />
 
 **Elegant**, **versatile** and **expressive** **behavior**-style **acceptance tests** for **HTTP APIs** based on Gherkin language and built-on-top of [Cucumber](http://cukes.info)
 
-<!--
-Just write what you want and what you expect using Gherkin syntax.
-Apitance provides a built-in reusable Cucumber descriptive steps which aims to cover all the test cases that involves an HTTP API
--->
-
 > **Still work in progress**
-
-<!--
-## Rationale
--->
 
 ## Features
 

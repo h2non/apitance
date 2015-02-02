@@ -6,7 +6,7 @@
   "engineStrict": true,
   "repository": "h2non/apitance",
   "author": "Tomas Aparicio",
-  "licenses": "MIT",
+  "license": "MIT",
   "main": "src/index",
   "directories": {
     "lib": "./src"
