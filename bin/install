@@ -3,10 +3,6 @@
 version=0.1.0-beta.1
 os=`uname`
 
-if [ -z $version ]; then
-  echo "Missing required version argument" && exit 1
-fi
-
 if [[ "$os" == 'Linux' ]]; then
    platform='linux'
 elif [[ "$os" == 'Darwin' ]]; then
