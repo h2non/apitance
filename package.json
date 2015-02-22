@@ -37,6 +37,7 @@
     "bdd"
   ],
   "dependencies": {
+    "chai": "^1.10.0",
     "chai-http": "^1.0.0",
     "cucumber": "^0.4.4",
     "fw": "^0.1.0",
@@ -47,7 +48,6 @@
     "yargs": "^3.2.0"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
     "concat-files": "^0.1.0",
     "mocha": "^2.0.1",
     "mocha-traceur": "^2.0.0",
