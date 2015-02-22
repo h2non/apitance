@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=0.1.0-beta.1
+version=0.1.0-beta.0
 os=`uname`
 
 if [[ "$os" == 'Linux' ]]; then
@@ -26,12 +26,24 @@ echo
 
 download="https://github.com/h2non/apitance/releases/download/$version/apitance-$version-$platform-x64.nar"
 curl -k -L $download -o apitance.nar
-if [ $? -ne 0 ]; then
+
+if [ $? != 0 ]; then
   echo "Error while downloading binary..." && exit 1
 fi
 
 bash apitance.nar extract -o $HOME/.apitance
-ln -s $HOME/.apitance/bin/apitance /usr/bin/apitance
+mv .nar/bin/node $HOME/.apitance/bin
+
+echo "#!/usr/bin/env bash"     >  $HOME/.apitance/bin/run
+echo 'node $(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/apitance $*' >> $HOME/.apitance/bin/run
+
+if [ -f /usr/bin/apitance ]; then
+  rm -f /usr/bin/apitance
+fi
+
+ln -s $HOME/.apitance/bin/run /usr/bin/apitance
+chmod +x $HOME/.apitance/bin/apitance
+chmod +x /usr/bin/apitance
 
 rm -f apitance.nar
 rm -rf .nar
