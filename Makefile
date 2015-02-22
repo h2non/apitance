@@ -2,6 +2,7 @@ STUBBY = ./node_modules/.bin/stubby
 CUCUMBER = ./node_modules/.bin/cucumber
 MOCHA = ./node_modules/.bin/mocha
 TRACEUR = ./node_modules/.bin/traceur
+NAR = ./node_modules/.bin/nar
 APITANCE = ./bin/apitance
 
 define concat-mocks
@@ -70,6 +71,10 @@ release:
 
 release-minor:
 	@$(call release,minor)
+
+nar:
+	$(NAR) create -e --os linux
+	$(NAR) create -e --os darwin
 
 publish: test
 	git push --tags origin HEAD:master

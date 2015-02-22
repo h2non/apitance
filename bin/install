@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+version=$1
+os=`uname`
+
+echo
+echo "Apitance Installer"
+echo
+
+if [ -z version ]; then
+  echo "Missing required version argument" && exit 1
+fi
+
+if [[ "$os" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$os" == 'Darwin' ]]; then
+   platform='darwin'
+else
+  echo "Unsupported operative system. Only Linux and OSX are supported"
+  exit 1
+fi
+
+if [ -d "$HOME/.apitance" ]; then
+  echo "Another Apitance installation found in $HOME/.apitance"
+  echo "Remove it to continue..."
+  exit 1
+fi
+
+download="https://github.com/h2non/apitance/releases/download/$version/apitance-$version-$platform-x64.nar"
+curl -k $download -o apitance.nar
+if [ $? -ne 0 ]; then
+  echo "Error while downloading binary..." && exit 1
+fi
+
+bash apitance.nar extract -o $HOME/.apitance
+ln -s $HOME/.apitance/bin/apitance /usr/bin/apitance
+
+echo
+echo "Installation completed"
+echo
+echo "To getting started simply run:"
+echo "apitance --help"
+echo
+echo "Enjoy!"

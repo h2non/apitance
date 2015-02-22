@@ -22,10 +22,15 @@
 
 ## Installation
 
-Apitance requires you have installed [node.js](http://nodejs.org)
+Apitance requires you have installed [node.js](http://nodejs.org) or [io.js](https://iojs.org)
 
 ```bash
-$ [sudo] npm install -g apitance
+[sudo] npm install -g apitance
+```
+
+Or install it as standalone self-contained package:
+```bash
+curl -s https://raw.github.com/h2non/apitance/master/bin/install.sh 0.1.0-beta.1 | bash
 ```
 
 ## Usage
