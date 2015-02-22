@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=0.1.0-beta.0
+version=0.1.0-beta.1
 os=`uname`
 
 if [[ "$os" == 'Linux' ]]; then
