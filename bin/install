@@ -35,8 +35,9 @@ bash apitance.nar extract -o $HOME/.apitance
 mv .nar/bin/node $HOME/.apitance/bin
 
 echo "#!/usr/bin/env bash"     >  $HOME/.apitance/bin/run
-echo 'dir=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)' >> $HOME/.apitance/bin/run
-echo 'node $dir/apitance $*' >> $HOME/.apitance/bin/run
+echo 'script="$(readlink ${BASH_SOURCE[0]})"' >> $HOME/.apitance/bin/run
+echo 'base="$(dirname $script)"' >> $HOME/.apitance/bin/run
+echo 'node $base/apitance $*' >> $HOME/.apitance/bin/run
 
 if [ -f /usr/bin/apitance ]; then
   rm -f /usr/bin/apitance
