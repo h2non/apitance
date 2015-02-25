@@ -76,6 +76,9 @@ nar:
 	$(NAR) create -e --os linux
 	$(NAR) create -e --os darwin
 
+push-doc:
+	relish push h2non/apitance
+
 publish: test
 	git push --tags origin HEAD:master
 	npm publish
