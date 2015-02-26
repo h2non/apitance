@@ -30,7 +30,7 @@ Apitance requires you have installed [node.js](http://nodejs.org) or [io.js](htt
 
 Or install it as standalone self-contained package:
 ```bash
-curl -s -L https://raw.github.com/h2non/apitance/master/bin/install | sudo bash
+curl -s -L https://raw.github.com/h2non/apitance/master/scripts/installer.sh | sudo bash -v 0.1.0-beta.1
 ```
 
 ## Usage
