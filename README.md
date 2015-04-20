@@ -2,7 +2,9 @@
 
 <img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right" />
 
-**Elegant**, **versatile** and **expressive** **behavior-driven** **acceptance tests** for **HTTP APIs** based on Gherkin language and built-on-top of [Cucumber](http://cukes.info)
+**Versatile** and **expressive** **behavior-oriented** **acceptance tests** for **HTTP APIs** based on Gherkin language and built-on-top of [Cucumber](http://cukes.info)
+
+Designed for dissidents. Not for BDD purists. 
 
 > **Still work in progress**
 
