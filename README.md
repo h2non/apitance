@@ -15,6 +15,7 @@ Designed for dissidents. Not for BDD purists.
 - High number of assert/expectation expressions for responses validation
 - Request/responses caching, reuse and chaining
 - Validate body responses against [JSON schema](http://json-schema.org/)
+- Support HAR 1.2
 - API discovering based on RAML
 - Support all the Cucumber.js features, such as hooks, configuration, stages...
 - Built-in support for templating and variables such as environment variables
