@@ -123,22 +123,13 @@ $ apitance --help
 $ apitance -r path/to/steps path/to/feature
 ```
 
-## Contributing
-
-Wanna help?
-
-`apitance` is completely written in JavaScript Harmony (ECMAScript 6)
-
-You must add new test cases for any new feature or refactor you do,
-always following the same design/code patterns that already exist
-
 ### Development
 
-Only [node.js](http://nodejs.org) is required for development
+Only [node.js](http://nodejs.org)/[io.js](http://iojs.org) is required for development
 
 Clone/fork this repository
 ```
-$ git clone https://github.com/h2non/apitance.git && cd apitance
+$ git clone https://github.com/h2non/apitance && cd apitance
 ```
 
 Install dependencies
