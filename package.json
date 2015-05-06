@@ -1,7 +1,7 @@
 {
   "name": "apitance",
   "version": "0.1.0-beta.1",
-  "description": "Elegant, expressive and versatile acceptance HTTP API tests",
+  "description": "Acceptance HTTP API test runner built on top of Cucumber",
   "preferGlobal": true,
   "engineStrict": true,
   "repository": "h2non/apitance",
@@ -27,14 +27,13 @@
     "http",
     "rest",
     "restful",
-    "bdd",
     "cucumber",
     "gherking",
     "http-api",
     "raml",
     "blueprint",
-    "spec",
-    "bdd"
+    "bdd",
+    "jsonschema"
   ],
   "dependencies": {
     "chai": "^2.0.0",
