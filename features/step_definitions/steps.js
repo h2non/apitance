@@ -4,7 +4,6 @@ module.exports = function () {
   var Step = this.defineStep
 
   this.Before(function (scenario, done) {
-    console.log('Clean all')
     nock.cleanAll()
     done()
   })
