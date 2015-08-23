@@ -1,2 +1,18 @@
 #!/usr/bin/env node
-require('../src/cli')
+
+const cli = require('../lib/cli')
+
+cli.run(process.argv, function (succeeded) {
+  var code = succeeded ? 0 : 1
+
+  if (process.stdout.write('')) {
+    return exitNow(code)
+  }
+
+  // write() returned false, kernel buffer is not empty yet...
+  process.stdout.on('drain', exitNow)
+})
+
+function exitNow(code) {
+  process.exit(code)
+}

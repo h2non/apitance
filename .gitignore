@@ -8,3 +8,4 @@ src
 .server.pid
 test/mocks/all.yaml
 .nar
+*_old

@@ -4,7 +4,7 @@ Feature: Configuration
   reuse them in multiple test scenarios
 
   Background:
-    Given the following global HTTP client configuration:
+    Given the global HTTP configuration:
       | Name    | Value |
       | URL     | http://localhost:8882 |
       | Method  | POST |
@@ -14,6 +14,7 @@ Feature: Configuration
       | Headers | {"Version": "0.1.0"} |
       | Content-Type | application/json |
       | Query | key=value&another=value |
+    Then define the environment variable "DEBUG" to "apitance"
 
   @valid
   Scenario: simple configuration request
@@ -25,6 +26,3 @@ Feature: Configuration
       {"config": true}
       """
     And flush global configuration
-
-
-
