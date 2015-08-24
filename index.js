@@ -15,7 +15,6 @@ function apitance(opts) {
  */
 
 apitance.cli = require('./lib/cli')
-apitance.step = require('./lib/step')
 apitance.Cucumber = require('cucumber')
 
 /**
