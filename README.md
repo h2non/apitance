@@ -2,7 +2,7 @@
 
 <img src="https://developer.atlassian.com/stash/docs/latest/images/home/section-rest.png" width="180" align="right" />
 
-**Acceptance framework** for **HTTP** testing with BDD flavors, built-on-top of [Cucumber](http://cukes.info).
+**Acceptance testing framework** for **HTTP** testing with BDD flavors, built-on-top of [Cucumber](http://cukes.info).
 
 Not for BDD purists.
 
